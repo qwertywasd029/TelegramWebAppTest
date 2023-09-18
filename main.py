@@ -12,6 +12,7 @@ bot = Client(
 
 @bot.on_message()
 def process_message(client: Client, message: types.Message) -> None:
+    print("received")
     if message.web_app_data:
         print(message.web_app_data)
 
@@ -26,7 +27,7 @@ if __name__ == "__main__":
             reply_markup=types.InlineKeyboardMarkup(
                 inline_keyboard=[[types.InlineKeyboardButton(
                     text="Avvia Web App",
-                    web_app=types.WebAppInfo(url="https://qwertywasd029.github.io/TelegramWebAppTest/index.html")
+                    web_app=types.WebAppInfo(url="https://qwertywasd029.github.io/TelegramWebAppTest")
                 )]]
             )
         )
