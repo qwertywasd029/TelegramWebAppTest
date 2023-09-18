@@ -15,5 +15,17 @@
 </head>
 <body>
     <h1>Ciao Mondo!</h1>
+    <button id="send-data" onclick="DemoApp.testData();">Cliccami</button>
+
+    <script>
+
+    const DemoApp = {
+
+        testData(){
+            Telegram.WebApp.sendData(new Date().toString());
+        }
+        
+    }
+    </script>
 </body>
 </html>
